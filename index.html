@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Corrida Beneficente Guerreiros do Baca — 18 de outubro de 2026, às 7h30. Distâncias de 2,5 km e 5 km.">
+  <title>Corrida Beneficente Guerreiros do Baca</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <nav class="nav container">
+      <div class="brand">GUERREIROS<br><span>DO BACA</span></div>
+      <a href="#inscricao" class="nav-btn">INSCREVA-SE</a>
+    </nav>
+    <div class="hero-content container">
+      <p class="eyebrow">18 DE OUTUBRO DE 2026 • 7H30</p>
+      <h1>Corrida Beneficente<br><strong>Guerreiros do Baca</strong></h1>
+      <p class="hero-sub">Corra, caminhe e faça parte dessa causa.</p>
+      <div class="hero-actions">
+        <a href="#inscricao" class="btn btn-primary">QUERO ME INSCREVER</a>
+        <a href="#kits" class="btn btn-outline">VER VALORES</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="info-strip">
+      <div class="container info-grid">
+        <div><strong>18/10/2026</strong><span>Data</span></div>
+        <div><strong>7h30</strong><span>Largada</span></div>
+        <div><strong>2,5 KM</strong><span>Distância</span></div>
+        <div><strong>5 KM</strong><span>Distância</span></div>
+      </div>
+    </section>
+
+    <section id="kits" class="section">
+      <div class="container">
+        <p class="eyebrow dark">ESCOLHA SEU KIT</p>
+        <h2>Três opções para participar</h2>
+        <div id="kitCards" class="cards"></div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container two-cols">
+        <div>
+          <p class="eyebrow dark">A PROVA</p>
+          <h2>Corra ou caminhe por uma boa causa.</h2>
+          <p>Escolha entre 2,5 km e 5 km e participe da Corrida Beneficente Guerreiros do Baca. Você pode se inscrever individualmente ou cadastrar vários participantes de uma só vez.</p>
+        </div>
+        <div class="event-card">
+          <div><span>Data</span><strong>18 de outubro de 2026</strong></div>
+          <div><span>Horário</span><strong>7h30</strong></div>
+          <div><span>Local</span><strong>A definir</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="inscricao" class="section">
+      <div class="container form-container">
+        <p class="eyebrow dark">INSCRIÇÃO</p>
+        <h2>Monte sua inscrição</h2>
+        <p class="muted">Você pode cadastrar mais de uma pessoa. Cada participante terá seus próprios dados, distância, modalidade e kit.</p>
+
+        <div class="quantity-box">
+          <div>
+            <strong>Participantes</strong>
+            <span>Adicione ou remova pessoas</span>
+          </div>
+          <div class="stepper">
+            <button type="button" id="minusParticipant">−</button>
+            <strong id="participantCount">1</strong>
+            <button type="button" id="plusParticipant">+</button>
+          </div>
+        </div>
+
+        <form id="registrationForm" novalidate>
+          <div id="participants"></div>
+
+          <div class="summary">
+            <div>
+              <span>Participantes</span>
+              <strong id="summaryCount">1</strong>
+            </div>
+            <div>
+              <span>Total</span>
+              <strong id="summaryTotal">R$ 19,90</strong>
+            </div>
+          </div>
+
+          <div class="responsible">
+            <h3>Responsável pelo pagamento</h3>
+            <label>Nome do responsável
+              <input id="responsibleName" type="text" autocomplete="name" required>
+            </label>
+            <label>WhatsApp do responsável
+              <input id="responsibleWhatsapp" type="tel" autocomplete="tel" required>
+            </label>
+          </div>
+
+          <label class="accept"><input id="accept" type="checkbox" required> Declaro que os dados informados estão corretos.</label>
+          <button class="btn btn-primary full" id="submitBtn" type="submit">FINALIZAR INSCRIÇÃO</button>
+          <p id="formMessage" class="form-message" role="status"></p>
+        </form>
+      </div>
+    </section>
+
+    <section id="payment" class="section payment-section hidden">
+      <div class="container payment-card">
+        <p class="eyebrow dark">INSCRIÇÃO CRIADA</p>
+        <h2>Agora falta o pagamento</h2>
+        <p>Use os dados abaixo para realizar o Pix. Sua inscrição ficará pendente até a confirmação do pagamento.</p>
+        <div class="payment-total" id="paymentTotal">R$ 0,00</div>
+        <div class="pix-box">
+          <span>Recebedor</span><strong>cwplayeventos</strong>
+          <span>Chave Pix</span>
+          <div class="pix-row">
+            <code id="pixKey">cwplayeventos@gmail.com</code>
+            <button type="button" class="copy-btn" id="copyPix">COPIAR</button>
+          </div>
+        </div>
+        <div class="registration-number">
+          Número da inscrição
+          <strong id="registrationId">GDB-000000</strong>
+        </div>
+        <button type="button" class="btn btn-primary full" id="paidBtn">JÁ REALIZEI O PAGAMENTO</button>
+        <p id="paymentMessage" class="form-message"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <strong>Corrida Beneficente Guerreiros do Baca</strong>
+      <span>18 de outubro de 2026 • 7h30</span>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
